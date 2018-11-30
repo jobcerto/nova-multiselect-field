@@ -3,6 +3,7 @@
         <template slot="field">
             <el-select 
                 class="w-full" 
+                filterable
                 :class="errorClasses"
                 :placeholder="field.name"
                 v-model="value" 
