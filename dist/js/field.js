@@ -486,13 +486,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          * Set the initial, internal value for the field.
          */
         setInitialValue: function setInitialValue() {
-            if (Array.isArray(this.value)) {
-                this.value = this.field.value.map(function (value) {
-                    return value.id;
-                });
-            } else {
-                this.value = [];
+            if (this.field.value == null) {
+                return this.value = [];
             }
+            this.value = this.field.value.map(function (value) {
+                return value.id;
+            });
         },
 
 
