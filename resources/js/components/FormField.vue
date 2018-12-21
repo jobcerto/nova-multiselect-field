@@ -32,7 +32,11 @@ export default {
          * Set the initial, internal value for the field.
          */
         setInitialValue() {
-            this.value = this.field.value.map(value  => value.id) || []
+            if (Array.isArray(this.value)) {
+            this.value = this.field.value.map(value  => value.id);
+            } else {
+                this.value = [];
+            }
         },
 
         /**
